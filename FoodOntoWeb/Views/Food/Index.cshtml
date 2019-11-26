@@ -1,0 +1,71 @@
+﻿@model SearchViewModel
+
+<section class="backgraound">
+    <div class="container">
+        <div class="row">
+            <div style="color:white">
+                <div>Sinh viên : Nguyễn Ngọc Tài</div>
+                <div>MSSV : 17520997</div>
+                <div>Giáo viên hướng dẫn : Trương Hải Bằng</div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="back">
+                    <div class="line1 os-animation" data-os-animation="rotateInDownLeft" data-os-animation-delay="1s"> </div>
+                    <div class="line2 os-animation" data-os-animation="rotateInDownLeft" data-os-animation-delay="1s"> </div>
+                    <h2 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.50s">Ontology  cho Thức ăn, Thực phẩm</h2>
+                    <h3 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="1s">To Search Online</h3>
+                    <div class="line3 os-animation" data-os-animation="rotateInDownRight" data-os-animation-delay="1s"> </div>
+                    <div class="line4 os-animation" data-os-animation="rotateInDownRight" data-os-animation-delay="1s"> </div>
+                </div>
+            </div>
+        </div>
+        <form asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#result">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="textbox os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s" style="margin-left:250px;">
+                    <h3>Engergy /kcal</h3>
+                    <input asp-for="@Model.Energy" type="text" placeholder="kcal" value="0" style="width:200px; " />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="textbox os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
+                    <h3>Protein /g</h3>
+                    <input asp-for="@Model.Protein" type="text" placeholder="gam" value="0" style="width:200px" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="textbox1 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s" style="margin-left:250px;">
+                    <h3>Fat /g</h3>
+                    <input asp-for="@Model.Fat" type="text" placeholder="gam" value="0" style="width:200px; " />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="textbox1 os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s">
+                    <h3>Carb /g</h3>
+                    <input asp-for="@Model.Carb" type="text" placeholder="gam" value="0" style="width:200px" />
+                    <button type="submit" class="search"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6" style="color:white; margin-left:400px">
+                <div class="row">
+                    <div class="col-3"><input type="radio" asp-for="@Model.Type" value="0" checked /><div>Tất cả</div></div>
+                    <div class="col-3"><input type="radio" asp-for="@Model.Type" value="1" /><div>Ngũ cốc</div></div>
+                    <div class="col-3"><input type="radio" asp-for="@Model.Type" value="2" /><div>Khoai củ</div></div>
+                    <div class="col-3"><input type="radio" asp-for="@Model.Type" value="3" /><div>Hạt quả</div></div>
+                </div>
+                
+                
+            </div>
+        </form>
+        
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div id="result" class="pl-4">
+            @{ await Html.RenderPartialAsync("_Result", new List<string>()); }
+        </div>
+        
+    </div>
+    
+</section>
+

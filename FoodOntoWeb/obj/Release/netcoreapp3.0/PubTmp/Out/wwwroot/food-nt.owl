@@ -1,0 +1,438 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY food-nt "http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#"
+     xml:base="http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt"
+     xmlns:food-nt="http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#hasCarbPer100g -->
+
+    <owl:DatatypeProperty rdf:about="&food-nt;hasCarbPer100g">
+        <rdfs:domain rdf:resource="&food-nt;Thuc_pham"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#hasEnergyPer100g -->
+
+    <owl:DatatypeProperty rdf:about="&food-nt;hasEnergyPer100g">
+        <rdfs:domain rdf:resource="&food-nt;Thuc_pham"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#hasFatPer100g -->
+
+    <owl:DatatypeProperty rdf:about="&food-nt;hasFatPer100g">
+        <rdfs:domain rdf:resource="&food-nt;Thuc_pham"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#hasProteinPer100g -->
+
+    <owl:DatatypeProperty rdf:about="&food-nt;hasProteinPer100g">
+        <rdfs:domain rdf:resource="&food-nt;Thuc_pham"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Hat_qua -->
+
+    <owl:Class rdf:about="&food-nt;Hat_qua">
+        <rdfs:subClassOf rdf:resource="&food-nt;Thuc_pham"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Khoai_cu -->
+
+    <owl:Class rdf:about="&food-nt;Khoai_cu">
+        <rdfs:subClassOf rdf:resource="&food-nt;Thuc_pham"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Ngu_coc -->
+
+    <owl:Class rdf:about="&food-nt;Ngu_coc">
+        <rdfs:subClassOf rdf:resource="&food-nt;Thuc_pham"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Thuc_pham -->
+
+    <owl:Class rdf:about="&food-nt;Thuc_pham"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Banh_bao -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Banh_bao">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.5</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">219.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">47.5</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">6.1</hasProteinPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Banh_duc -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Banh_duc">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.3</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">0.9</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">11.3</hasCarbPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">52.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Banh_mi -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Banh_mi">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.8</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">249.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">52.6</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">7.9</hasProteinPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Banh_pho -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Banh_pho">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.0</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">141.0</hasEnergyPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">3.2</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">32.1</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Banh_trang_mong -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Banh_trang_mong">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.2</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">333.0</hasEnergyPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">4.0</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">78.9</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Bap_tuoi -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Bap_tuoi">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">196.0</hasEnergyPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">2.3</hasFatPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">39.6</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">4.1</hasProteinPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Bot_san_day -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Bot_san_day">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.0</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">0.7</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">340.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">84.3</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Bun -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Bun">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.0</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">1.7</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">110.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">25.7</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Cu_san -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Cu_san">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.2</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">1.1</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">152.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">36.4</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Cu_tu -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Cu_tu">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasProteinPer100g rdf:datatype="&xsd;float">0.0</hasProteinPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">1.5</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">21.5</hasCarbPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">92.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Cui_dua_gia -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Cui_dua_gia">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">36.0</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">368.0</hasEnergyPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">4.8</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">6.2</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Cui_dua_non -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Cui_dua_non">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">1.7</hasFatPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">2.6</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">3.5</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">40.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Dau_den -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Dau_den">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">1.7</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">24.2</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">325.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">53.3</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Dau_ha_lan -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Dau_ha_lan">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">1.4</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">22.2</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">342.0</hasEnergyPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">60.1</hasFatPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Dau_phong -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Dau_phong">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasCarbPer100g rdf:datatype="&xsd;float">15.5</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">27.5</hasProteinPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">44.5</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">573.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Dau_phu -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Dau_phu">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasProteinPer100g rdf:datatype="&xsd;float">10.9</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">17.6</hasCarbPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">5.4</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">95.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Gao_nep_cai -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Gao_nep_cai">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">1.5</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">346.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">74.9</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">8.6</hasProteinPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Gao_te -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Gao_te">
+        <rdf:type rdf:resource="&food-nt;Ngu_coc"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">1.0</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">344.0</hasEnergyPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">7.9</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">76.2</hasCarbPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Hat_dieu -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Hat_dieu">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasCarbPer100g rdf:datatype="&xsd;float">28.7</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">46.3</hasProteinPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">46.3</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">605.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Khoai_lang -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Khoai_lang">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.2</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">0.8</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">119.0</hasEnergyPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">28.5</hasFatPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Khoai_lang_nghe -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Khoai_lang_nghe">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.3</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">1.2</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">116.0</hasEnergyPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">27.1</hasFatPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Khoai_mon -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Khoai_mon">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">0.2</hasEnergyPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">1.5</hasEnergyPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">109.0</hasEnergyPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">25.2</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Khoai_tay -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Khoai_tay">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.0</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">2.0</hasProteinPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">21.0</hasCarbPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">92.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Khoai_tay_chien -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Khoai_tay_chien">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasProteinPer100g rdf:datatype="&xsd;float">2.2</hasProteinPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">35.4</hasFatPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">49.3</hasCarbPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">525.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Me -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Me">
+        <rdf:type rdf:resource="&food-nt;Hat_qua"/>
+        <hasCarbPer100g rdf:datatype="&xsd;float">17.6</hasCarbPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">20.1</hasProteinPer100g>
+        <hasFatPer100g rdf:datatype="&xsd;float">46.4</hasFatPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">568.0</hasEnergyPer100g>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/nnt/ontologies/2019/10/food-nt#Mien_dong -->
+
+    <owl:NamedIndividual rdf:about="&food-nt;Mien_dong">
+        <rdf:type rdf:resource="&food-nt;Khoai_cu"/>
+        <hasFatPer100g rdf:datatype="&xsd;float">0.1</hasFatPer100g>
+        <hasProteinPer100g rdf:datatype="&xsd;float">0.6</hasProteinPer100g>
+        <hasEnergyPer100g rdf:datatype="&xsd;float">332.0</hasEnergyPer100g>
+        <hasCarbPer100g rdf:datatype="&xsd;float">82.2</hasCarbPer100g>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
